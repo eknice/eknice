@@ -1,0 +1,118 @@
+# Dictionary containing detailed information about the 5 generations of computers
+computer_generations = {
+    1: {
+        "name": "First Generation",
+        "period": "1940-1956",
+        "technology": "Vacuum Tubes",
+        "features": [
+            "Large in size (often room-sized)",
+            "Expensive to produce and maintain",
+            "Limited memory capacity",
+            "Slow processing speed",
+            "High power consumption",
+            "Generated significant heat",
+            "Required frequent maintenance",
+            "Programmed using machine language"
+        ],
+        "examples": ["ENIAC", "UNIVAC I", "IBM 701", "Manchester Mark 1"],
+        "key_figures": ["John Presper Eckert", "John Mauchly", "Alan Turing"],
+        "impact": "Laid the foundation for modern computing and demonstrated the potential of electronic calculation",
+        "limitations": "Unreliable due to frequent tube burnouts, limited in speed and capacity"
+    },
+    2: {
+        "name": "Second Generation",
+        "period": "1956-1963",
+        "technology": "Transistors",
+        "features": [
+            "Smaller size compared to first generation",
+            "More reliable and durable",
+            "Less heat generation",
+            "Faster processing speed",
+            "Lower power consumption",
+            "Improved portability",
+            "Use of assembly languages and early high-level languages"
+        ],
+        "examples": ["IBM 1401", "UNIVAC II", "IBM 7090", "CDC 1604"],
+        "key_figures": ["William Shockley", "John Bardeen", "Walter Brattain"],
+        "impact": "Enabled more businesses and institutions to adopt computers, advancing fields like space exploration and nuclear research",
+        "limitations": "Still relatively expensive and large, limited memory capacity"
+    },
+    3: {
+        "name": "Third Generation",
+        "period": "1964-1971",
+        "technology": "Integrated Circuits",
+        "features": [
+            "Significantly reduced size",
+            "Increased reliability",
+            "Lower cost than previous generations",
+            "Increased speed and efficiency",
+            "Improved storage capacity",
+            "Introduction of operating systems",
+            "Support for high-level programming languages",
+            "Ability to run multiple programs simultaneously"
+        ],
+        "examples": ["IBM System/360", "PDP-8", "CDC 6600", "UNIVAC 1108"],
+        "key_figures": ["Jack Kilby", "Robert Noyce", "Gordon Moore"],
+        "impact": "Popularized computers in scientific, business, and government applications; laid groundwork for personal computing",
+        "limitations": "Still primarily used by large organizations due to cost and complexity"
+    },
+    4: {
+        "name": "Fourth Generation",
+        "period": "1971-present",
+        "technology": "Microprocessors",
+        "features": [
+            "Very small size (microcomputers and later, handheld devices)",
+            "Greatly increased processing power",
+            "User-friendly interfaces (GUIs)",
+            "Personal computers become widely available",
+            "Networking capabilities and internet connectivity",
+            "Massive increases in memory and storage capacity",
+            "Wide range of software applications",
+            "Multimedia capabilities"
+        ],
+        "examples": ["Apple II", "IBM PC", "Commodore 64", "Modern desktops, laptops, smartphones, and tablets"],
+        "key_figures": ["Steve Jobs", "Bill Gates", "Steve Wozniak", "Ted Hoff"],
+        "impact": "Brought computing to the masses, revolutionized communication, work, entertainment, and access to information",
+        "limitations": "Security concerns, rapid obsolescence, environmental impact of electronic waste"
+    },
+    5: {
+        "name": "Fifth Generation",
+        "period": "Present and future",
+        "technology": "Artificial Intelligence and Quantum Computing",
+        "features": [
+            "Advanced machine learning capabilities",
+            "Natural language processing and generation",
+            "Quantum supremacy in specific tasks",
+            "Solving complex problems beyond classical computing capabilities",
+            "Advanced robotics and automation",
+            "Internet of Things (IoT) integration",
+            "Neuromorphic computing",
+            "Potential for true artificial general intelligence"
+        ],
+        "examples": ["IBM Watson", "Google's Sycamore quantum processor", "OpenAI's GPT models", "D-Wave quantum computers"],
+        "key_figures": ["Yoshua Bengio", "Geoffrey Hinton", "Yann LeCun", "David Deutsch"],
+        "impact": "Potential to revolutionize fields such as healthcare, finance, scientific research, and solve previously intractable problems",
+        "limitations": "Ethical concerns, high development costs, complexity in implementation and understanding"
+    }
+}
+
+def print_generation_info(gen_num, info):
+    print(f"\n{'=' * 50}")
+    print(f"{info['name']} (Generation {gen_num})")
+    print(f"{'=' * 50}")
+    print(f"Period: {info['period']}")
+    print(f"Technology: {info['technology']}")
+    print("\nFeatures:")
+    for feature in info['features']:
+        print(f"  - {feature}")
+    print(f"\nExamples: {', '.join(info['examples'])}")
+    print(f"\nKey Figures: {', '.join(info['key_figures'])}")
+    print(f"\nImpact: {info['impact']}")
+    print(f"\nLimitations: {info['limitations']}")
+
+# Print information for all generations
+print("The Five Generations of Computers")
+print("=================================")
+
+for gen_num, gen_info in computer_generations.items():
+    print_generation_info(gen_num, gen_info)
